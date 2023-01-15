@@ -1,5 +1,5 @@
 # mySpringBoot
-⚙️SpringBoot项目，编写配置文件，各层结构✅
+⚙️SpringBoot项目，编写配置文件，SpringBoot分层结构✅
 # 注解
 
 ## @SpringBootApplication
