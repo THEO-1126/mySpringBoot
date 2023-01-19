@@ -1,6 +1,7 @@
 # 端口
 server:
   port: 8080
+  context-path: /
 
 management:
   endpoints:
@@ -25,11 +26,10 @@ management:
 # 描述项目基础信息
 info:
   app:
-    name: node16-boot-actuator
-    port: 8016
+    name: mySringBoot
+    port: 8080
     version: 1.0.0
-    author: cicada
-
+    author: libbing
 
 spring:
 # mysql
@@ -42,18 +42,29 @@ spring:
     # 应用名称
     name: mySpringBoot
 # 资源
+  mvc:
+#    view:
+#      suffix: .html
+    static-path-pattern: /**
   web:
     resources:
-      static-locations: classpath:/templates/,classpath:/static/
-  mvc:
-    view:
-      suffix: .html
+      static-locations: classpath:/templates/,classpath:/static/,classpath:/static/js/
+#  thymeleaf:
+#    cache: false
+#    prefix: classpath:/static/
+#    suffix: .js
 
-# mybatis 加载bean和 xml
+
+# mybatis 加载 bean和 xml ，映射路径配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: cn.edu.guet.bean
+#  configLocation: classpath:mybatis-config.xml
 
+
+# 日志输出
 logging:
   level:
     cn.edu.guet.springbootdemo.mapper: DEBUG
+  file:
+    name: D:/program/LanqiaoWeb/mySpringBoot/boot.log
