@@ -18,7 +18,7 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
-    @RequestMapping("/saveBook.html")
+    @RequestMapping("/saveBook.do")
     public Result saveBook(Book book){//表单传参
         System.out.println("后台接收的book对象："+book);
         bookService.saveBook(book);

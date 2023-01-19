@@ -10,4 +10,5 @@ import cn.edu.guet.bean.Book;
  */
 public interface BookService {
     void saveBook(Book book);
+    Object getBookById(Integer id);
 }

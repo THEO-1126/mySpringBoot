@@ -1,12 +1,15 @@
 package cn.edu.guet.bean;
 
 import java.io.Serializable;
-
+import lombok.Data;
 /**
  * @Author liwei
  * @Date 2023/1/8 17:16
  * @Version 1.0
  */
+
+// 实现序列化接口
+@Data
 public class Book implements Serializable {
     private int id;
     private String bookName;
