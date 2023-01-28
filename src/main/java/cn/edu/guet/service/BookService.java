@@ -3,6 +3,8 @@ package cn.edu.guet.service;
 
 import cn.edu.guet.bean.Book;
 
+import java.util.List;
+
 /**
  * @Author liwei
  * @Date 2023/1/9 17:14
@@ -11,4 +13,5 @@ import cn.edu.guet.bean.Book;
 public interface BookService {
     void saveBook(Book book);
     Object getBookById(Integer id);
+    public List<Book> getAllBooks();
 }

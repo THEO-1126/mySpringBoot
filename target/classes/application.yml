@@ -11,7 +11,7 @@ management:
       # 自定义监控路径 monitor
       # 默认值：http://localhost:8016/actuator/*
       # 配置后：http://localhost:8016/monitor/*
-      base-path: /monitor
+#      base-path: /monitor
   endpoint:
     health:
       show-details: always
@@ -72,6 +72,8 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: cn.edu.guet.bean
+  configuration:
+    map-underscore-to-camel-case: true
 #  configLocation: classpath:mybatis-config.xml
 
 
