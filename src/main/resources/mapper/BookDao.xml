@@ -7,4 +7,9 @@
         INSERT INTO book(book_name,author,price,publisher)
         VALUES(#{bookName},#{author},#{price},#{publisher})
     </insert>
+
+    <select id="getAllBooks" resultType="cn.edu.guet.bean.Book">
+        SELECT *
+        FROM book
+    </select>
 </mapper>

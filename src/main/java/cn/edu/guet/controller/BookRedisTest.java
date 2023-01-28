@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @Version 17.0.5
  */
 
-public class BookRedisTest {
-    @Resource
-    private RedisTemplate redisTemplate;
-
-    // 数据存入redis
-    @PostMapping("/redis/set/{key}/{value}")
-    public void set(@PathVariable("key") String key,@PathVariable("value") String value){
-        redisTemplate.opsForValue().set(key,value);
-    }
-
-    // 从redis 取数据
-    @GetMapping("/redis/get/{key}")
-    public Object get(@PathVariable("key") String key){
-        return redisTemplate.opsForValue().get(key);
-    }
-}
+//public class BookRedisTest {
+//    @Resource
+//    private RedisTemplate redisTemplate;
+//
+//    // 数据存入redis
+//    @PostMapping("/redis/set/{key}/{value}")
+//    public void set(@PathVariable("key") String key,@PathVariable("value") String value){
+//        redisTemplate.opsForValue().set(key,value);
+//    }
+//
+//    // 从redis 取数据
+//    @GetMapping("/redis/get/{key}")
+//    public Object get(@PathVariable("key") String key){
+//        return redisTemplate.opsForValue().get(key);
+//    }
+//}

@@ -1,994 +1,96 @@
-2023-01-20T00:01:54.318+08:00  INFO 4748 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 4748 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:01:54.328+08:00  INFO 4748 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:01:55.012+08:00  INFO 4748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:01:55.014+08:00  INFO 4748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:01:55.033+08:00  INFO 4748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:01:55.457+08:00  INFO 4748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:01:55.463+08:00  INFO 4748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:01:55.463+08:00  INFO 4748 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:01:55.529+08:00  INFO 4748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:01:55.529+08:00  INFO 4748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1158 ms
-2023-01-20T00:01:55.774+08:00  WARN 4748 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookHandler': Injection of resource dependencies failed
-2023-01-20T00:01:55.774+08:00  INFO 4748 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-20T00:01:55.790+08:00  INFO 4748 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-01-20T00:01:55.806+08:00 ERROR 4748 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-An attempt was made to call a method that does not exist. The attempt was made from the following location:
-
-    org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration.jedisPoolConfig(JedisConnectionConfiguration.java:114)
-
-The following method did not exist:
-
-    'void redis.clients.jedis.JedisPoolConfig.setMaxWait(java.time.Duration)'
-
-The calling method's class, org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration, was loaded from the following location:
-
-    jar:file:/C:/Users/asus/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.1/spring-boot-autoconfigure-3.0.1.jar!/org/springframework/boot/autoconfigure/data/redis/JedisConnectionConfiguration.class
-
-The called method's class, redis.clients.jedis.JedisPoolConfig, is available from the following locations:
-
-    jar:file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar!/redis/clients/jedis/JedisPoolConfig.class
-
-The called method's class hierarchy was loaded from the following locations:
-
-    redis.clients.jedis.JedisPoolConfig: file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar
-    org.apache.commons.pool2.impl.GenericObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.impl.BaseObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.BaseObject: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-
-
-Action:
-
-Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration and redis.clients.jedis.JedisPoolConfig
-
-2023-01-20T00:03:50.380+08:00  INFO 29148 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 29148 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:03:50.380+08:00  INFO 29148 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:03:51.040+08:00  INFO 29148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:03:51.040+08:00  INFO 29148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:03:51.065+08:00  INFO 29148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:03:51.452+08:00  INFO 29148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:03:51.458+08:00  INFO 29148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:03:51.458+08:00  INFO 29148 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:03:51.523+08:00  INFO 29148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:03:51.523+08:00  INFO 29148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
-2023-01-20T00:03:51.777+08:00  WARN 29148 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookHandler': Injection of resource dependencies failed
-2023-01-20T00:03:51.779+08:00  INFO 29148 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-20T00:03:51.792+08:00  INFO 29148 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-01-20T00:03:51.792+08:00 ERROR 29148 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-An attempt was made to call a method that does not exist. The attempt was made from the following location:
-
-    org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration.jedisPoolConfig(JedisConnectionConfiguration.java:114)
-
-The following method did not exist:
-
-    'void redis.clients.jedis.JedisPoolConfig.setMaxWait(java.time.Duration)'
-
-The calling method's class, org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration, was loaded from the following location:
-
-    jar:file:/C:/Users/asus/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.1/spring-boot-autoconfigure-3.0.1.jar!/org/springframework/boot/autoconfigure/data/redis/JedisConnectionConfiguration.class
-
-The called method's class, redis.clients.jedis.JedisPoolConfig, is available from the following locations:
-
-    jar:file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar!/redis/clients/jedis/JedisPoolConfig.class
-
-The called method's class hierarchy was loaded from the following locations:
-
-    redis.clients.jedis.JedisPoolConfig: file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar
-    org.apache.commons.pool2.impl.GenericObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.impl.BaseObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.BaseObject: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-
-
-Action:
-
-Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration and redis.clients.jedis.JedisPoolConfig
-
-2023-01-20T00:04:15.270+08:00  INFO 28140 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 28140 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:04:15.272+08:00  INFO 28140 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:04:15.893+08:00  INFO 28140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:04:15.908+08:00  INFO 28140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:04:15.925+08:00  INFO 28140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:04:16.306+08:00  INFO 28140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:04:16.306+08:00  INFO 28140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:04:16.306+08:00  INFO 28140 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:04:16.382+08:00  INFO 28140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:04:16.382+08:00  INFO 28140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
-2023-01-20T00:04:16.639+08:00  WARN 28140 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookHandler': Injection of resource dependencies failed
-2023-01-20T00:04:16.639+08:00  INFO 28140 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-20T00:04:16.661+08:00  INFO 28140 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-01-20T00:04:16.675+08:00 ERROR 28140 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-An attempt was made to call a method that does not exist. The attempt was made from the following location:
-
-    org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration.jedisPoolConfig(JedisConnectionConfiguration.java:114)
-
-The following method did not exist:
-
-    'void redis.clients.jedis.JedisPoolConfig.setMaxWait(java.time.Duration)'
-
-The calling method's class, org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration, was loaded from the following location:
-
-    jar:file:/C:/Users/asus/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.1/spring-boot-autoconfigure-3.0.1.jar!/org/springframework/boot/autoconfigure/data/redis/JedisConnectionConfiguration.class
-
-The called method's class, redis.clients.jedis.JedisPoolConfig, is available from the following locations:
-
-    jar:file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar!/redis/clients/jedis/JedisPoolConfig.class
-
-The called method's class hierarchy was loaded from the following locations:
-
-    redis.clients.jedis.JedisPoolConfig: file:/C:/Users/asus/.m2/repository/redis/clients/jedis/3.0.1/jedis-3.0.1.jar
-    org.apache.commons.pool2.impl.GenericObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.impl.BaseObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.BaseObject: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-
-
-Action:
-
-Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration and redis.clients.jedis.JedisPoolConfig
-
-2023-01-20T00:06:10.115+08:00  INFO 13592 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 13592 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:06:10.115+08:00  INFO 13592 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:06:10.797+08:00  INFO 13592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:06:10.797+08:00  INFO 13592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:06:10.813+08:00  INFO 13592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:06:11.280+08:00  INFO 13592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:06:11.285+08:00  INFO 13592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:06:11.285+08:00  INFO 13592 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:06:11.357+08:00  INFO 13592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:06:11.357+08:00  INFO 13592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1189 ms
-2023-01-20T00:06:11.613+08:00  WARN 13592 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookHandler': Injection of resource dependencies failed
-2023-01-20T00:06:11.615+08:00  INFO 13592 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-20T00:06:11.631+08:00  INFO 13592 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-01-20T00:06:11.638+08:00 ERROR 13592 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-An attempt was made to call a method that does not exist. The attempt was made from the following location:
-
-    org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration.jedisPoolConfig(JedisConnectionConfiguration.java:114)
-
-The following method did not exist:
-
-    'void redis.clients.jedis.JedisPoolConfig.setMaxWait(java.time.Duration)'
-
-The calling method's class, org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration, was loaded from the following location:
-
-    jar:file:/C:/Users/asus/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.1/spring-boot-autoconfigure-3.0.1.jar!/org/springframework/boot/autoconfigure/data/redis/JedisConnectionConfiguration.class
-
-The called method's class, redis.clients.jedis.JedisPoolConfig, is available from the following locations:
-
-    jar:file:/C:/Users/asus/.m2/repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisPoolConfig.class
-
-The called method's class hierarchy was loaded from the following locations:
-
-    redis.clients.jedis.JedisPoolConfig: file:/C:/Users/asus/.m2/repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar
-    org.apache.commons.pool2.impl.GenericObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.impl.BaseObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.BaseObject: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-
-
-Action:
-
-Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration and redis.clients.jedis.JedisPoolConfig
-
-2023-01-20T00:08:23.870+08:00  INFO 3700 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 3700 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:08:23.872+08:00  INFO 3700 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:08:24.476+08:00 ERROR 3700 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration.redisTemplate
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:250) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:243) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:233) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:181) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:129) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 37 common frames omitted
-
-2023-01-20T00:08:24.492+08:00  WARN 3700 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
-
-java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:658) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:650) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1276) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:863) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:851) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:838) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:778) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 21 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 25 common frames omitted
-
-2023-01-20T00:10:05.797+08:00  INFO 29652 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 29652 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:10:05.805+08:00  INFO 29652 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:10:06.273+08:00 ERROR 29652 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration.redisTemplate
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:250) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:243) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:233) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:181) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:129) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 37 common frames omitted
-
-2023-01-20T00:10:06.289+08:00  WARN 29652 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
-
-java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:658) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:650) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1276) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:863) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:851) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:838) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:778) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 21 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 25 common frames omitted
-
-2023-01-20T00:10:21.494+08:00  INFO 28628 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 28628 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:10:21.497+08:00  INFO 28628 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:10:22.117+08:00 ERROR 28628 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration.redisTemplate
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:250) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:243) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:233) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:181) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:129) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 37 common frames omitted
-
-2023-01-20T00:10:22.123+08:00  WARN 28628 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
-
-java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:658) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:650) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1276) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:863) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:851) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:838) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:778) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 21 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 25 common frames omitted
-
-2023-01-20T00:10:42.143+08:00  INFO 27624 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 27624 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:10:42.143+08:00  INFO 27624 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:10:42.754+08:00  INFO 27624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:10:42.755+08:00  INFO 27624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:10:42.771+08:00  INFO 27624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:10:43.142+08:00  INFO 27624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:10:43.164+08:00  INFO 27624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:10:43.165+08:00  INFO 27624 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:10:43.239+08:00  INFO 27624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:10:43.239+08:00  INFO 27624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1049 ms
-2023-01-20T00:10:43.474+08:00  WARN 27624 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookHandler': Injection of resource dependencies failed
-2023-01-20T00:10:43.474+08:00  INFO 27624 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-20T00:10:43.500+08:00  INFO 27624 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-01-20T00:10:43.506+08:00 ERROR 27624 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-An attempt was made to call a method that does not exist. The attempt was made from the following location:
-
-    org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration.jedisPoolConfig(JedisConnectionConfiguration.java:114)
-
-The following method did not exist:
-
-    'void redis.clients.jedis.JedisPoolConfig.setMaxWait(java.time.Duration)'
-
-The calling method's class, org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration, was loaded from the following location:
-
-    jar:file:/C:/Users/asus/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.1/spring-boot-autoconfigure-3.0.1.jar!/org/springframework/boot/autoconfigure/data/redis/JedisConnectionConfiguration.class
-
-The called method's class, redis.clients.jedis.JedisPoolConfig, is available from the following locations:
-
-    jar:file:/C:/Users/asus/.m2/repository/redis/clients/jedis/2.4.2/jedis-2.4.2.jar!/redis/clients/jedis/JedisPoolConfig.class
-
-The called method's class hierarchy was loaded from the following locations:
-
-    redis.clients.jedis.JedisPoolConfig: file:/C:/Users/asus/.m2/repository/redis/clients/jedis/2.4.2/jedis-2.4.2.jar
-    org.apache.commons.pool2.impl.GenericObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.impl.BaseObjectPoolConfig: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-    org.apache.commons.pool2.BaseObject: file:/C:/Users/asus/.m2/repository/org/apache/commons/commons-pool2/2.8.1/commons-pool2-2.8.1.jar
-
-
-Action:
-
-Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration and redis.clients.jedis.JedisPoolConfig
-
-2023-01-20T00:11:12.233+08:00  INFO 1908 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 1908 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:11:12.233+08:00  INFO 1908 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:11:12.713+08:00 ERROR 1908 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration.redisTemplate
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:250) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:243) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:233) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:181) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:129) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.0.1.jar:3.0.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 37 common frames omitted
-
-2023-01-20T00:11:12.713+08:00  WARN 1908 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
-
-java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.data.redis.JedisConnectionConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.0.3.jar:6.0.3]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:652) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1632) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:559) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:531) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:658) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:650) ~[spring-beans-6.0.3.jar:6.0.3]
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1276) ~[spring-context-6.0.3.jar:6.0.3]
-	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:863) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:851) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:838) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:778) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.1.jar:3.0.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.1.jar:3.0.1]
-	at cn.edu.guet.MySpringBootApplication.main(MySpringBootApplication.java:10) ~[classes/:na]
-Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/jedis/JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.3.jar:6.0.3]
-	... 21 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.connection.jedis.JedisClientConfiguration$JedisClientConfigurationBuilder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	... 25 common frames omitted
-
-2023-01-20T00:16:24.040+08:00  INFO 31176 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 31176 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:16:24.043+08:00  INFO 31176 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:16:24.729+08:00  INFO 31176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:16:24.731+08:00  INFO 31176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:16:24.750+08:00  INFO 31176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:16:25.158+08:00  INFO 31176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:16:25.171+08:00  INFO 31176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:16:25.171+08:00  INFO 31176 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:16:25.247+08:00  INFO 31176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:16:25.248+08:00  INFO 31176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
-2023-01-20T00:16:25.805+08:00  INFO 31176 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:16:26.145+08:00  INFO 31176 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:16:26.207+08:00  INFO 31176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:16:26.218+08:00  INFO 31176 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.559 seconds (process running for 3.121)
-2023-01-20T00:16:26.530+08:00  INFO 31176 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:16:26.530+08:00  INFO 31176 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:16:26.534+08:00  INFO 31176 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-01-20T00:16:26.597+08:00  INFO 31176 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:16:26.793+08:00  INFO 31176 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73f9386c
-2023-01-20T00:16:26.798+08:00  INFO 31176 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:16:38.830+08:00  WARN 31176 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/xml;charset=UTF-8' is not supported]
-2023-01-20T00:17:58.761+08:00  WARN 31176 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/xml;charset=UTF-8' is not supported]
-2023-01-20T00:19:29.005+08:00  INFO 31176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:19:29.010+08:00  INFO 31176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:19:34.011+08:00  INFO 21764 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 21764 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:19:34.014+08:00  INFO 21764 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:19:34.748+08:00  INFO 21764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:19:34.750+08:00  INFO 21764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:19:34.766+08:00  INFO 21764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:19:35.160+08:00  INFO 21764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:19:35.166+08:00  INFO 21764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:19:35.167+08:00  INFO 21764 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:19:35.242+08:00  INFO 21764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:19:35.243+08:00  INFO 21764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1177 ms
-2023-01-20T00:19:35.748+08:00  INFO 21764 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:19:36.063+08:00  INFO 21764 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:19:36.126+08:00  INFO 21764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:19:36.138+08:00  INFO 21764 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.606 seconds (process running for 3.262)
-2023-01-20T00:19:36.692+08:00  INFO 21764 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:19:36.806+08:00  INFO 21764 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26b22dc8
-2023-01-20T00:19:36.810+08:00  INFO 21764 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:19:37.246+08:00  WARN 21764 --- [boundedElastic-1] o.s.b.a.d.r.RedisReactiveHealthIndicator : Redis health check failed
-
-org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1602) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1533) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1358) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1341) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1083) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:479) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:105) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:67) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:227) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.5.1.jar:3.5.1]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:105) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1531) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	... 14 common frames omitted
-Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.RedisClient.connect(RedisClient.java:216) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:111) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:111) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$getConnection$0(LettucePoolingConnectionProvider.java:93) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:70) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:571) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:298) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:223) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:99) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	... 15 common frames omitted
-Caused by: io.lettuce.core.RedisCommandTimeoutException: Connection initialization timed out after no timeout
-	at io.lettuce.core.protocol.RedisHandshakeHandler.lambda$channelRegistered$0(RedisHandshakeHandler.java:67) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:66) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	... 1 common frames omitted
-
-2023-01-20T00:19:40.283+08:00  INFO 21764 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:19:40.283+08:00  INFO 21764 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:19:40.284+08:00  INFO 21764 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:19:40.337+08:00  WARN 21764 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
-2023-01-20T00:22:47.852+08:00  INFO 21764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:22:47.858+08:00  INFO 21764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:22:50.124+08:00  INFO 5260 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 5260 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:22:50.132+08:00  INFO 5260 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:22:50.845+08:00  INFO 5260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:22:50.847+08:00  INFO 5260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:22:50.862+08:00  INFO 5260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:22:51.284+08:00  INFO 5260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:22:51.290+08:00  INFO 5260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:22:51.290+08:00  INFO 5260 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:22:51.363+08:00  INFO 5260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:22:51.364+08:00  INFO 5260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1196 ms
-2023-01-20T00:22:51.877+08:00  INFO 5260 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:22:52.182+08:00  INFO 5260 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:22:52.246+08:00  INFO 5260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:22:52.258+08:00  INFO 5260 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.577 seconds (process running for 3.428)
-2023-01-20T00:22:52.647+08:00  INFO 5260 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:22:52.769+08:00  INFO 5260 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2910eb27
-2023-01-20T00:22:52.772+08:00  INFO 5260 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:22:53.174+08:00  WARN 5260 --- [boundedElastic-1] o.s.b.a.d.r.RedisReactiveHealthIndicator : Redis health check failed
-
-org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1602) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1533) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1358) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1341) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1083) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:479) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:105) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:67) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:227) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.5.1.jar:3.5.1]
-	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.5.1.jar:3.5.1]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:105) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1531) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	... 14 common frames omitted
-Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.RedisClient.connect(RedisClient.java:216) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:111) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:111) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$getConnection$0(LettucePoolingConnectionProvider.java:93) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:70) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:571) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:298) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:223) ~[commons-pool2-2.11.1.jar:2.11.1]
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:99) ~[spring-data-redis-3.0.0.jar:3.0.0]
-	... 15 common frames omitted
-Caused by: io.lettuce.core.RedisCommandTimeoutException: Connection initialization timed out after no timeout
-	at io.lettuce.core.protocol.RedisHandshakeHandler.lambda$channelRegistered$0(RedisHandshakeHandler.java:67) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:66) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	... 1 common frames omitted
-
-2023-01-20T00:22:56.453+08:00  INFO 5260 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:22:56.454+08:00  INFO 5260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:22:56.455+08:00  INFO 5260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:24:04.020+08:00  INFO 5260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:24:04.025+08:00  INFO 5260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:24:06.997+08:00  INFO 25964 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 25964 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:24:06.999+08:00  INFO 25964 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:24:07.630+08:00  INFO 25964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:24:07.631+08:00  INFO 25964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:24:07.646+08:00  INFO 25964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:24:08.034+08:00  INFO 25964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:24:08.040+08:00  INFO 25964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:24:08.040+08:00  INFO 25964 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:24:08.123+08:00  INFO 25964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:24:08.124+08:00  INFO 25964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1093 ms
-2023-01-20T00:24:08.611+08:00  INFO 25964 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:24:08.904+08:00  INFO 25964 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:24:08.961+08:00  INFO 25964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:24:08.973+08:00  INFO 25964 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.333 seconds (process running for 2.933)
-2023-01-20T00:24:09.307+08:00  INFO 25964 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:24:09.435+08:00  INFO 25964 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdbc7f5
-2023-01-20T00:24:09.438+08:00  INFO 25964 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:26:19.330+08:00  INFO 25964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:26:19.337+08:00  INFO 25964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:26:21.467+08:00  INFO 29208 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 29208 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:26:21.469+08:00  INFO 29208 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:26:22.084+08:00  INFO 29208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:26:22.086+08:00  INFO 29208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:26:22.101+08:00  INFO 29208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:26:22.471+08:00  INFO 29208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:26:22.476+08:00  INFO 29208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:26:22.477+08:00  INFO 29208 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:26:22.559+08:00  INFO 29208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:26:22.559+08:00  INFO 29208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1054 ms
-2023-01-20T00:26:23.061+08:00  INFO 29208 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:26:23.365+08:00  INFO 29208 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:26:23.420+08:00  INFO 29208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:26:23.433+08:00  INFO 29208 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.308 seconds (process running for 3.072)
-2023-01-20T00:26:23.997+08:00  INFO 29208 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:26:24.097+08:00  INFO 29208 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5359690c
-2023-01-20T00:26:24.101+08:00  INFO 29208 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:26:24.651+08:00  INFO 29208 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /127.0.0.1:6379
-2023-01-20T00:26:24.660+08:00  INFO 29208 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 127.0.0.1/<unresolved>:6379
-2023-01-20T00:27:11.370+08:00  INFO 29208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:27:11.370+08:00  INFO 29208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:27:11.371+08:00  INFO 29208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-01-20T00:27:30.790+08:00  INFO 29208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:27:30.794+08:00  INFO 29208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:27:33.833+08:00  INFO 27848 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 27848 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:27:33.836+08:00  INFO 27848 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:27:34.528+08:00  INFO 27848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:27:34.531+08:00  INFO 27848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:27:34.554+08:00  INFO 27848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:27:34.959+08:00  INFO 27848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:27:34.968+08:00  INFO 27848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:27:34.969+08:00  INFO 27848 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:27:35.058+08:00  INFO 27848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:27:35.058+08:00  INFO 27848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1183 ms
-2023-01-20T00:27:35.557+08:00  INFO 27848 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:27:35.851+08:00  INFO 27848 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:27:35.908+08:00  INFO 27848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:27:35.920+08:00  INFO 27848 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.441 seconds (process running for 3.095)
-2023-01-20T00:27:36.016+08:00  INFO 27848 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:27:36.167+08:00  INFO 27848 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d994445
-2023-01-20T00:27:36.172+08:00  INFO 27848 --- [RMI TCP Connection(1)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:29:02.950+08:00  INFO 9776 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 9776 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:29:02.959+08:00  INFO 9776 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:29:03.772+08:00  INFO 9776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:29:03.774+08:00  INFO 9776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:29:03.793+08:00  INFO 9776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:29:04.275+08:00  INFO 9776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:29:04.287+08:00  INFO 9776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:29:04.287+08:00  INFO 9776 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:29:04.387+08:00  INFO 9776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:29:04.387+08:00  INFO 9776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1376 ms
-2023-01-20T00:29:05.053+08:00  INFO 9776 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:29:05.378+08:00  INFO 9776 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:29:05.440+08:00  INFO 9776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:29:05.451+08:00  INFO 9776 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.926 seconds (process running for 3.752)
-2023-01-20T00:29:05.982+08:00  INFO 9776 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:29:06.082+08:00  INFO 9776 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74cfb59b
-2023-01-20T00:29:06.085+08:00  INFO 9776 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:29:20.100+08:00  INFO 9776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:29:20.104+08:00  INFO 9776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:29:31.205+08:00  INFO 31888 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 31888 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:29:31.206+08:00  INFO 31888 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:29:31.969+08:00  INFO 31888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:29:31.971+08:00  INFO 31888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:29:31.989+08:00  INFO 31888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:29:32.427+08:00  INFO 31888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:29:32.435+08:00  INFO 31888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:29:32.435+08:00  INFO 31888 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:29:32.516+08:00  INFO 31888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:29:32.516+08:00  INFO 31888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1269 ms
-2023-01-20T00:29:33.131+08:00  INFO 31888 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:29:33.534+08:00  INFO 31888 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:29:33.604+08:00  INFO 31888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:29:33.616+08:00  INFO 31888 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.798 seconds (process running for 7.543)
-2023-01-20T00:29:38.694+08:00  INFO 31888 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:29:38.694+08:00  INFO 31888 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:29:38.695+08:00  INFO 31888 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:36:14.172+08:00  INFO 10796 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 10796 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:36:14.175+08:00  INFO 10796 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:36:14.878+08:00  INFO 10796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:36:14.879+08:00  INFO 10796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:36:14.896+08:00  INFO 10796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:36:15.286+08:00  INFO 10796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:36:15.293+08:00  INFO 10796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:36:15.293+08:00  INFO 10796 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:36:15.375+08:00  INFO 10796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:36:15.375+08:00  INFO 10796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1154 ms
-2023-01-20T00:36:15.954+08:00  INFO 10796 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:36:16.269+08:00  INFO 10796 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:36:16.326+08:00  INFO 10796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:36:16.338+08:00  INFO 10796 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.519 seconds (process running for 3.126)
-2023-01-20T00:36:16.443+08:00  INFO 10796 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:36:16.610+08:00  INFO 10796 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e9e8aff
-2023-01-20T00:36:16.616+08:00  INFO 10796 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:36:23.017+08:00  INFO 10796 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:36:23.018+08:00  INFO 10796 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:36:23.019+08:00  INFO 10796 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:37:59.151+08:00  INFO 10796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:37:59.157+08:00  INFO 10796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:38:04.211+08:00  INFO 32740 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 32740 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:38:04.214+08:00  INFO 32740 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:38:04.990+08:00  INFO 32740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:38:04.992+08:00  INFO 32740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:38:05.010+08:00  INFO 32740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:38:05.449+08:00  INFO 32740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:38:05.457+08:00  INFO 32740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:38:05.457+08:00  INFO 32740 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:38:05.545+08:00  INFO 32740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:38:05.546+08:00  INFO 32740 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
-2023-01-20T00:38:06.192+08:00  INFO 32740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:38:06.538+08:00  INFO 32740 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:38:06.599+08:00  INFO 32740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:38:06.612+08:00  INFO 32740 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.832 seconds (process running for 3.617)
-2023-01-20T00:38:06.914+08:00  INFO 32740 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-01-20T00:38:07.054+08:00  INFO 32740 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59c8114c
-2023-01-20T00:38:07.059+08:00  INFO 32740 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-01-20T00:38:22.607+08:00  INFO 32740 --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:38:22.607+08:00  INFO 32740 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:38:22.609+08:00  INFO 32740 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-01-20T00:46:02.323+08:00  INFO 32740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-01-20T00:46:02.329+08:00  INFO 32740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-01-20T00:46:12.276+08:00  INFO 31900 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 31900 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:46:12.278+08:00  INFO 31900 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:46:13.185+08:00  INFO 31900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:46:13.189+08:00  INFO 31900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:46:13.215+08:00  INFO 31900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:46:13.717+08:00  INFO 31900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:46:13.725+08:00  INFO 31900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:46:13.725+08:00  INFO 31900 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:46:13.806+08:00  INFO 31900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:46:13.807+08:00  INFO 31900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1489 ms
-2023-01-20T00:46:14.516+08:00  INFO 31900 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:46:14.963+08:00  INFO 31900 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:46:15.036+08:00  INFO 31900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:46:15.048+08:00  INFO 31900 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 3.178 seconds (process running for 8.137)
-2023-01-20T00:46:27.938+08:00  INFO 31900 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:46:27.939+08:00  INFO 31900 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:46:27.940+08:00  INFO 31900 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:46:50.313+08:00  INFO 1864 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 1864 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:46:50.314+08:00  INFO 1864 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:46:51.088+08:00  INFO 1864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:46:51.091+08:00  INFO 1864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:46:51.110+08:00  INFO 1864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:46:51.621+08:00  INFO 1864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:46:51.628+08:00  INFO 1864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:46:51.628+08:00  INFO 1864 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:46:51.736+08:00  INFO 1864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:46:51.737+08:00  INFO 1864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1387 ms
-2023-01-20T00:46:52.461+08:00  INFO 1864 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:46:52.824+08:00  INFO 1864 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:46:52.917+08:00  INFO 1864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:46:52.936+08:00  INFO 1864 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.993 seconds (process running for 7.959)
-2023-01-20T00:46:59.340+08:00  INFO 1864 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:46:59.341+08:00  INFO 1864 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:46:59.342+08:00  INFO 1864 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:48:09.662+08:00  INFO 32664 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 32664 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:48:09.664+08:00  INFO 32664 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:48:10.465+08:00  INFO 32664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:48:10.467+08:00  INFO 32664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:48:10.487+08:00  INFO 32664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:48:10.993+08:00  INFO 32664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:48:11.002+08:00  INFO 32664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:48:11.003+08:00  INFO 32664 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:48:11.094+08:00  INFO 32664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:48:11.094+08:00  INFO 32664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1391 ms
-2023-01-20T00:48:11.724+08:00  INFO 32664 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:48:12.080+08:00  INFO 32664 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:48:12.164+08:00  INFO 32664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:48:12.177+08:00  INFO 32664 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.887 seconds (process running for 7.55)
-2023-01-20T00:48:16.298+08:00  INFO 32664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:48:16.298+08:00  INFO 32664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:48:16.299+08:00  INFO 32664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-20T00:50:46.705+08:00  INFO 32664 --- [http-nio-8080-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
-
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x03~~0xd2a.0xecy0xb9_0x1b<0x1eYD-0x010xfa0xc80xbf=0x810xbf0x870x1d0xd20x7f0x18Y0x040xc50x1bp ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+2023-01-29T00:11:07.302+08:00  INFO 13276 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 13276 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
+2023-01-29T00:11:07.314+08:00  INFO 13276 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T00:11:08.031+08:00  INFO 13276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-29T00:11:08.033+08:00  INFO 13276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-29T00:11:08.062+08:00  INFO 13276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-01-29T00:11:08.563+08:00  INFO 13276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T00:11:08.572+08:00  INFO 13276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T00:11:08.572+08:00  INFO 13276 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-29T00:11:08.660+08:00  INFO 13276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T00:11:08.660+08:00  INFO 13276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1307 ms
+2023-01-29T00:11:09.424+08:00  INFO 13276 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-01-29T00:11:09.782+08:00  INFO 13276 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-01-29T00:11:09.853+08:00  INFO 13276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T00:11:09.866+08:00  INFO 13276 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 3.021 seconds (process running for 3.64)
+2023-01-29T00:11:10.020+08:00  INFO 13276 --- [RMI TCP Connection(5)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T00:11:10.145+08:00  INFO 13276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T00:11:10.146+08:00  INFO 13276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T00:11:10.148+08:00  INFO 13276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-29T00:11:10.194+08:00  INFO 13276 --- [RMI TCP Connection(5)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b220e7
+2023-01-29T00:11:10.200+08:00  INFO 13276 --- [RMI TCP Connection(5)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T00:12:13.236+08:00  INFO 13276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T00:12:13.241+08:00  INFO 13276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T00:12:17.957+08:00  INFO 16092 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 16092 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
+2023-01-29T00:12:17.960+08:00  INFO 16092 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T00:12:18.621+08:00  INFO 16092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-29T00:12:18.622+08:00  INFO 16092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-29T00:12:18.637+08:00  INFO 16092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-01-29T00:12:19.022+08:00  INFO 16092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T00:12:19.035+08:00  INFO 16092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T00:12:19.035+08:00  INFO 16092 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-29T00:12:19.107+08:00  INFO 16092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T00:12:19.107+08:00  INFO 16092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2023-01-29T00:12:19.620+08:00  INFO 16092 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-01-29T00:12:19.918+08:00  INFO 16092 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-01-29T00:12:19.973+08:00  INFO 16092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T00:12:19.984+08:00  INFO 16092 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.388 seconds (process running for 2.868)
+2023-01-29T00:12:20.391+08:00  INFO 16092 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T00:12:20.498+08:00  INFO 16092 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b8c9fdd
+2023-01-29T00:12:20.502+08:00  INFO 16092 --- [RMI TCP Connection(2)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T00:12:25.291+08:00  INFO 16092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T00:12:25.291+08:00  INFO 16092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T00:12:25.292+08:00  INFO 16092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-29T00:12:25.358+08:00 ERROR 16092 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alibaba.fastjson.JSONException: can not cast to JSONObject.] with root cause
+
+java.lang.ClassCastException: class com.alibaba.fastjson.JSONArray cannot be cast to class com.alibaba.fastjson.JSONObject (com.alibaba.fastjson.JSONArray and com.alibaba.fastjson.JSONObject are in unnamed module of loader 'app')
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:258) ~[fastjson-1.2.83.jar:na]
+	at cn.edu.guet.controller.BookController.getAllBook(BookController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1010) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:902) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.4.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:884) ~[spring-webmvc-6.0.3.jar:6.0.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.4.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.3.jar:6.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
@@ -998,63 +100,27 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2023-01-20T00:50:53.974+08:00  INFO 26772 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 26772 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:50:53.975+08:00  INFO 26772 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:50:54.794+08:00  INFO 26772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:50:54.796+08:00  INFO 26772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:50:54.812+08:00  INFO 26772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:50:55.279+08:00  INFO 26772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:50:55.286+08:00  INFO 26772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:50:55.286+08:00  INFO 26772 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:50:55.369+08:00  INFO 26772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:50:55.370+08:00  INFO 26772 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
-2023-01-20T00:50:56.026+08:00  INFO 26772 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:50:56.409+08:00  INFO 26772 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:50:56.476+08:00  INFO 26772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:50:56.489+08:00  INFO 26772 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.88 seconds (process running for 7.846)
-2023-01-20T00:52:36.998+08:00  INFO 26772 --- [http-nio-8080-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
-
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x03Jj0xf2WY{0x090x97r0xdd0x1e~0xc80xd30x0cZ0xa00xa6e0xd30xd40xd80xab0x920xcf0xbf8Fr*0xc6M ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-01-20T00:53:18.228+08:00  INFO 26772 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-20T00:53:18.229+08:00  INFO 26772 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-20T00:53:18.231+08:00  INFO 26772 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-01-20T00:54:25.492+08:00 ERROR 26772 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
-
-io.lettuce.core.RedisCommandTimeoutException: Connection initialization timed out after no timeout
-	at io.lettuce.core.protocol.RedisHandshakeHandler.lambda$channelRegistered$0(RedisHandshakeHandler.java:67) ~[lettuce-core-6.2.2.RELEASE.jar:6.2.2.RELEASE]
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask$$$capture(AbstractEventExecutor.java:174) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:66) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-01-20T00:55:55.999+08:00  INFO 29452 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 29452 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
-2023-01-20T00:55:56.001+08:00  INFO 29452 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-01-20T00:55:56.906+08:00  INFO 29452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-20T00:55:56.908+08:00  INFO 29452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-20T00:55:56.928+08:00  INFO 29452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-01-20T00:55:57.471+08:00  INFO 29452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-01-20T00:55:57.481+08:00  INFO 29452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-20T00:55:57.481+08:00  INFO 29452 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
-2023-01-20T00:55:57.592+08:00  INFO 29452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-20T00:55:57.593+08:00  INFO 29452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1538 ms
-2023-01-20T00:55:58.273+08:00  INFO 29452 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-01-20T00:55:58.701+08:00  INFO 29452 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/monitor'
-2023-01-20T00:55:58.781+08:00  INFO 29452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-20T00:55:58.795+08:00  INFO 29452 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 3.204 seconds (process running for 8.161)
+2023-01-29T00:12:40.768+08:00  INFO 16092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T00:12:40.773+08:00  INFO 16092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T00:12:45.400+08:00  INFO 3556 --- [main] cn.edu.guet.MySpringBootApplication      : Starting MySpringBootApplication using Java 17.0.5 with PID 3556 (D:\program\LanqiaoWeb\mySpringBoot\target\classes started by asus in D:\program\LanqiaoWeb\mySpringBoot)
+2023-01-29T00:12:45.402+08:00  INFO 3556 --- [main] cn.edu.guet.MySpringBootApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T00:12:46.021+08:00  INFO 3556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-29T00:12:46.023+08:00  INFO 3556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-29T00:12:46.038+08:00  INFO 3556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-01-29T00:12:46.409+08:00  INFO 3556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T00:12:46.415+08:00  INFO 3556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T00:12:46.416+08:00  INFO 3556 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-29T00:12:46.494+08:00  INFO 3556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T00:12:46.495+08:00  INFO 3556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2023-01-29T00:12:47.070+08:00  INFO 3556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-01-29T00:12:47.358+08:00  INFO 3556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-01-29T00:12:47.413+08:00  INFO 3556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T00:12:47.425+08:00  INFO 3556 --- [main] cn.edu.guet.MySpringBootApplication      : Started MySpringBootApplication in 2.4 seconds (process running for 2.942)
+2023-01-29T00:12:47.784+08:00  INFO 3556 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T00:12:47.878+08:00  INFO 3556 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d53b0e
+2023-01-29T00:12:47.881+08:00  INFO 3556 --- [RMI TCP Connection(3)-192.168.206.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T00:12:51.362+08:00  INFO 3556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T00:12:51.362+08:00  INFO 3556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T00:12:51.363+08:00  INFO 3556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-29T00:13:26.150+08:00  INFO 3556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T00:13:26.154+08:00  INFO 3556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
